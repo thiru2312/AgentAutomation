@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce QA Lab</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Commerce QA Lab</h1>
+        <p id="session-status">Not signed in</p>
+      </header>
+
+      <section id="login-panel">
+        <h2>Customer Login</h2>
+        <form id="login-form">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="username" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+          <button type="submit">Sign in</button>
+        </form>
+        <p id="login-message" role="status"></p>
+      </section>
+
+      <section id="store-panel" hidden>
+        <h2>Products</h2>
+
+        <article class="product">
+          <h3>QA Field Notebook</h3>
+          <p>Price: $25.00</p>
+          <button
+            type="button"
+            class="add-to-cart"
+            data-product="QA Field Notebook"
+            data-price="25"
+          >
+            Add QA Field Notebook to cart
+          </button>
+        </article>
+
+        <article class="product">
+          <h3>Automation Reference Cards</h3>
+          <p>Price: $15.00</p>
+          <button
+            type="button"
+            class="add-to-cart"
+            data-product="Automation Reference Cards"
+            data-price="15"
+          >
+            Add Automation Reference Cards to cart
+          </button>
+        </article>
+
+        <section class="cart">
+          <h2>Cart</h2>
+          <p>Items: <span id="cart-count">0</span></p>
+          <p>Subtotal: <span id="subtotal">$0.00</span></p>
+
+          <label for="promo-code">Promotional code</label>
+          <input id="promo-code" name="promo-code" type="text">
+          <button id="apply-promo" type="button">Apply promotional code</button>
+          <p id="promo-message" role="status"></p>
+
+          <p>Discount: <span id="discount">$0.00</span></p>
+          <p>Total: <span id="total">$0.00</span></p>
+
+          <button id="checkout" type="button">Complete checkout</button>
+          <p id="checkout-message" role="status"></p>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

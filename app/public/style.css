@@ -1,0 +1,54 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f5f7fa;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: min(760px, 92%);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+header,
+section,
+.product {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+form,
+.cart {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input,
+button {
+  font: inherit;
+  padding: 0.7rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.product {
+  display: grid;
+  gap: 0.5rem;
+}
+
+[role="status"] {
+  min-height: 1.5rem;
+}
+
+#session-status {
+  font-weight: 600;
+}
